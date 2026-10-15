@@ -1,0 +1,30 @@
+{
+  "Backend Developer": {
+    "core": ["python", "java", "sql", "rest", "api", "postgresql", "docker", "git", "fastapi", "authentication"],
+    "nice": ["redis", "kubernetes", "aws", "microservices", "system design", "ci/cd", "testing", "kafka"]
+  },
+  "Full Stack Developer": {
+    "core": ["javascript", "typescript", "react", "node.js", "sql", "rest", "html", "css", "git", "docker"],
+    "nice": ["next.js", "postgresql", "mongodb", "aws", "testing", "ci/cd", "graphql", "tailwind"]
+  },
+  "Frontend Developer": {
+    "core": ["javascript", "typescript", "react", "html", "css", "git", "responsive design", "rest"],
+    "nice": ["next.js", "tailwind", "testing", "accessibility", "redux", "webpack", "vite", "figma"]
+  },
+  "Data Scientist": {
+    "core": ["python", "sql", "pandas", "numpy", "machine learning", "statistics", "scikit-learn", "data visualization"],
+    "nice": ["tensorflow", "pytorch", "spark", "tableau", "a/b testing", "nlp", "feature engineering", "mlops"]
+  },
+  "ML Engineer": {
+    "core": ["python", "machine learning", "deep learning", "pytorch", "tensorflow", "docker", "sql", "git", "mlops"],
+    "nice": ["kubernetes", "aws", "llm", "rag", "fastapi", "spark", "model deployment", "ci/cd"]
+  },
+  "DevOps Engineer": {
+    "core": ["linux", "docker", "kubernetes", "ci/cd", "aws", "terraform", "git", "bash", "monitoring"],
+    "nice": ["ansible", "prometheus", "grafana", "python", "helm", "gitops", "security", "networking"]
+  },
+  "Software Engineer": {
+    "core": ["data structures", "algorithms", "java", "python", "sql", "git", "system design", "oop", "testing"],
+    "nice": ["docker", "aws", "rest", "microservices", "ci/cd", "c++", "distributed systems", "concurrency"]
+  }
+}

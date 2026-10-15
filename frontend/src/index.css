@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy:       #0B1D2E;
+    --navy-light: #112638;
+    --navy-card:  #162F42;
+    --navy-border:#1E3D55;
+    --blue:       #3B6EF8;
+    --blue-hover: #2B5CE6;
+    --blue-glow:  #3B6EF826;
+    --slate:      #7FA3B8;
+    --slate-light:#A8C4D4;
+    --text:       #E8F1F6;
+    --text-muted: #7FA3B8;
+    --red:        #E05252;
+    --amber:      #D49A3A;
+    --green:      #34C48A;
+    --surface:    #F6F9FB;
+    --surface-border: #DCE8EE;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Typography */
+  .font-display {
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-xl bg-[#3B6EF8] px-6 py-3 text-sm font-semibold text-white
+           shadow-lg shadow-[#3B6EF8]/25 transition-all duration-200
+           hover:bg-[#2B5CE6] hover:shadow-[#3B6EF8]/40 hover:-translate-y-px
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3B6EF8]
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:translate-y-0 disabled:shadow-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-xl border border-[#1E3D55] bg-transparent px-5 py-2.5 text-sm font-medium text-[#A8C4D4]
+           transition-all duration-200 hover:border-[#3B6EF8] hover:text-white
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3B6EF8];
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-2xl border border-[#1E3D55] bg-[#162F42] p-6;
+  }
+
+  .card-light {
+    @apply rounded-2xl border border-[#DCE8EE] bg-white p-6 shadow-sm;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full rounded-xl border border-[#1E3D55] bg-[#0B1D2E]/60 px-4 py-3 text-sm text-[#E8F1F6]
+           placeholder:text-[#7FA3B8] transition-colors
+           focus:border-[#3B6EF8] focus:outline-none focus:ring-2 focus:ring-[#3B6EF8]/20;
+  }
+
+  .input-light {
+    @apply w-full rounded-xl border border-[#DCE8EE] bg-white px-4 py-3 text-sm text-[#0B1D2E]
+           placeholder:text-[#7FA3B8] transition-colors
+           focus:border-[#3B6EF8] focus:outline-none focus:ring-2 focus:ring-[#3B6EF8]/20;
+  }
+
+  /* Badges */
+  .badge-missing { @apply rounded-full border border-[#E05252]/50 bg-[#E05252]/10 px-3 py-1 text-xs font-medium text-[#E05252]; }
+  .badge-weak    { @apply rounded-full border border-[#D49A3A]/50 bg-[#D49A3A]/10 px-3 py-1 text-xs font-medium text-[#D49A3A]; }
+  .badge-strong  { @apply rounded-full border border-[#34C48A]/50 bg-[#34C48A]/10 px-3 py-1 text-xs font-medium text-[#34C48A]; }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#E8F1F6] via-[#A8C4D4] to-[#3B6EF8] bg-clip-text text-transparent;
+  }
+
+  /* Glow effects */
+  .glow-blue { box-shadow: 0 0 40px -10px #3B6EF840; }
+}
